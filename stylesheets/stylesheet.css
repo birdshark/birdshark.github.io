@@ -480,7 +480,7 @@ header {
 }
 .header-logo a{
   position: absolute;
-  top: 58px;
+  top: 38px;
   right: 300px;
   width: 134px;
   height: 58px;
@@ -493,7 +493,7 @@ header {
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 23px;
   line-height: 1.2;
-  color: #FFAABB;
+  color: #fafafa;
 }
 .inner {
   max-width: 60.25rem;
@@ -529,6 +529,15 @@ header {
   background-color: #111111;
 }
 
+.search {
+  padding: 1rem 0rem 1rem 40rem;
+}
+.search input{
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+
 #content-wrapper {
   padding-top: 30px;
   border-top: solid 1px #fff;
@@ -545,7 +554,6 @@ header {
 
 aside#sidebar {
   float: right;
-  width: 200px;
   min-height: 504px;
   padding-left: 20px;
   font-size: 12px;
@@ -641,12 +649,6 @@ td {
   font-weight: 300;
   text-align: center;
   border: 1px solid #ebebeb;
-}
-
-form {
-  padding: 20px;
-  background: #f2f2f2;
-
 }
 
 
