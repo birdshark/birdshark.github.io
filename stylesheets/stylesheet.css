@@ -503,6 +503,32 @@ header {
   margin-left: auto;
 }
 
+
+.nav {
+  height: 3rem;
+  background-color: #444444;
+  margin-top: -20px;
+}
+.nav ul{
+  list-style:none;
+  margin-top: 0px;
+  margin-left: -1rem;
+}
+.nav ul li{
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  padding: 1rem 1rem;
+  font-weight: 100;
+  float: left;
+  width: 50px;
+  height: 1rem;
+}
+.nav ul li a{
+  color: #fafafa;
+}
+.nav ul li:hover{
+  background-color: #111111;
+}
+
 #content-wrapper {
   padding-top: 30px;
   border-top: solid 1px #fff;
@@ -550,12 +576,7 @@ a.button small {
   display: block;
   font-size: 11px;
 }
-header a.button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: transparent url(../images/github-button.png) 0 0 no-repeat;
-}
+
 aside a.button {
   display: block;
   width: 138px;
@@ -592,7 +613,7 @@ pre code {
   border: none;
 }
 
-ul, ol, dl {
+ol, dl {
   margin-bottom: 20px;
 }
 
