@@ -1,0 +1,7 @@
+<aside id="sidebar">
+    <ul>
+        {% for post in site.posts %}
+            <li><a href="{{site.url}}{{post.url}}" >{{post.title}}</a>({{ post.date | date:'%Y-%m-%d' }})</li>
+        {% if forloop.last == false %},{% endif %}{% endfor %}
+    </ul>
+</aside>
