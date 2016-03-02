@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-{% include index-head.html %}
-<body>
-{% include header.html %}
-{% include navi.html %}
-<div id="content-wrapper">
-  <div class="inner">
-    {{ content }}
-    {% include aside.html %}
-  </div>
-</div>
-</body>
+
+  {% include head.html %}
+
+    <body>
+
+      {% include icomoon.html %}
+
+      {% include header.html %}
+
+      <div role="main" class="main-content">
+        {{ content }}
+      </div>
+
+      {% include aside.html %}
+
+      {% include footer.html %}
+
+    </body>
+
 </html>
