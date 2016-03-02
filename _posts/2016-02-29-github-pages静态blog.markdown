@@ -2,7 +2,7 @@
 layout: post
 title:  "github-pages静态blog"
 date:   2016-2-29 15:58:00
-tags: markdown
+tags: markdown github-pages
 categories: jekyll
 ---
 
@@ -46,7 +46,6 @@ categories: jekyll
 3. [gh-pages](https://github.com/github/pages-gem)
 
 当然，对于很多人来说`jekyll`，是个陌生人。但是纵观现在诸多门编程语言，致用时都可以用MVC来概述。
-
 本人是按照官方网站指导去做的，所遇问题有以下几点
 
 >1. 无法用gem命令创建Gemfile
@@ -56,7 +55,7 @@ categories: jekyll
 解法
 
 
->1. 未解
+>1. 未寻得解法,自己手动建一个Gemfile
 2. 运行`github-pages versions`查看依赖库，运行`gem list`查看本地以安装的库 两者对比，以`github-pages`为准，运行`gem uninstall 库名称`卸载冗余库
 3. 在`_config.yml`里添加`gems: [jekyll-paginate]`之后 分页功能即可正常使用
 
