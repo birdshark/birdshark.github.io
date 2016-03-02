@@ -5,7 +5,7 @@
  */
 
 // ---- You can choose a different set of fonts here
-$font-family: 'Open Sans', sans-serif;
+$font-family: 'Architects Daughter', "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", Helvetica, Verdana, Arial, sans-serif;
 
 // ---- The headings font sizes
 $font-size-h1: 2.827em;
@@ -74,6 +74,9 @@ blockquote {
 	margin-left: $side-padding;
 	font-style: italic;
 	color: $gray;
+  border-left: 1rem solid #222222;
+  padding: 0.1rem 0.2rem 0.1rem 1rem;
+  background: #111111;
 }
 
 .blockquote-footer {

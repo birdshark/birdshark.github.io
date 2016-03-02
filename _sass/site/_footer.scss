@@ -31,7 +31,8 @@
 .site-footer {
 	clear: both;
 	padding: .5em;
-	background: $site-footer-bg;
+	// background: $site-footer-bg;
+	background: url('../images/header-bg.jpg') -10px 70% no-repeat;
 	color: $site-footer-font-color;
 
 	a {

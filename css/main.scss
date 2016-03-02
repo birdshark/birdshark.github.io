@@ -5,6 +5,7 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+    "fonts/daughter",
     "base/normalize",
     "base/prism",
     "base/vars",
@@ -14,11 +15,11 @@
     "base/icomoon",
     "base/icons",
     "base/buttons",
-    "base/forms",
-    "base/notifications",
+    // "base/forms",
+    // "base/notifications",
     "base/tables",
     "base/fluidbox",
-    "base/animations",
+    // "base/animations",
     "site/404",
     "site/nav",
     "site/header",

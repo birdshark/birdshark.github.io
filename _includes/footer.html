@@ -20,24 +20,10 @@
 
 	<div class="row">
 		<div data-sr="move 16px scale up 20%, over .5s" class="social-info">
-			<a href="#">
+			<a href="https://twitter.com/{{ site.twitter_username }}">
 				<div class="svg-container-large">
 					<svg class="icon icon-twitter icon-light-blue" viewBox="0 0 32 32">
 						<use xlink:href="#icon-twitter"></use>
-					</svg>
-				</div>
-			</a>
-			<a href="#">
-				<div class="svg-container-large">
-					<svg class="icon icon-dribbble icon-light-blue" viewBox="0 0 32 32">
-						<use xlink:href="#icon-dribbble"></use>
-					</svg>
-				</div>
-			</a>
-			<a href="#">
-				<div class="svg-container-large">
-					<svg class="icon icon-instagram icon-light-blue" viewBox="0 0 32 32">
-						<use xlink:href="#icon-instagram"></use>
 					</svg>
 				</div>
 			</a>
@@ -62,10 +48,17 @@
 					</svg>
 				</div>
 			</a>
+			<a href="/feed.xml">
+				<div class="svg-container-large">
+					<svg class="icon icon-feed icon-light-blue" viewBox="0 0 32 32">
+						<use xlink:href="#icon-feed"></use>
+					</svg>
+				</div>
+			</a>
 		</div>
 	</div>
 
-	<div class="row">
+	<!-- <div class="row">
 		<p>Designed by <a href="https://twitter.com/chalatz" title="Christos Alatzas twitter page">Christos Alatzas</a>, powered by <a href="http://www.jekyllrb.com" target="_blank">Jekyll</a></p>
 		<p>get the code, at <a href="https://github.com/chalatz/yellowblue">github</a></p>
 		<p>
@@ -77,12 +70,14 @@
 				</div>
 			</a>
 		</p>
-	</div>
+	</div> -->
 
 </footer>
 
-<script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script>
+<!-- <script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script> -->
 <script src="{{ "/js/jquery.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/fluidbox.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/scrollreveal.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/scripts.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/highlight.pack.js" | prepend: site.baseurl }}"></script>
+<script>hljs.initHighlightingOnLoad();</script>

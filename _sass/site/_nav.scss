@@ -26,11 +26,11 @@
 	}
 
 	a {
-		padding-bottom: .2em;
 		position: relative;
 		overflow: hidden;
 		display: inline-block;
 		color: $nav-font-color;
+		font-weight: bold;
 
 		&:hover {
 			color: darken($bg-color, 40%);

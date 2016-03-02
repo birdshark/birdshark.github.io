@@ -2,14 +2,21 @@
 layout: post
 title:  "github-pages静态blog"
 date:   2016-2-29 15:58:00
-Tag: Blog 静态
-categories: /blog
+tags: markdown
+categories: jekyll
 ---
+
+
+>学而有术是谓兴,
+>学而无术是无心.
+>不学无术要不得,
+>不学有术是神棍.
+
+
+<!-- more -->
 
 ## __序__ ##
 此番乃无聊之作。是以生之有命，而学不止也。
-<!-- more -->
-
 
 ## __章__ ##
 1. 什么是`github pages`

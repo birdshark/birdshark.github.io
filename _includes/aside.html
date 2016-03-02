@@ -18,10 +18,8 @@
 					{% assign cat_size = cat | last | size %}
 					{% assign cat_slug = cat_name | slugify  %}
 					<li>
-						<a class="bold" href="/category/{{cat_slug | prepend: site.baseurl}}">
-							{{cat_name}} ({{cat_size}})
+						<a class="bold" href="/category/{{cat_slug | prepend: site.baseurl}}">{{cat_name}} ({{cat_size}})</a>
 					</li>
-						</a>
 				{% endfor %}
 			</ul>
 		</div>
@@ -51,5 +49,4 @@
 			</p>
 		</div>
 	</div>
-
 </aside>
