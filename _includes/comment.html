@@ -1,0 +1,32 @@
+<aside class="site-sidebar">
+	<div class="module">
+		<header class="block-module-header">
+			<h2>
+				<div class="svg-container">
+					<svg class="icon icon-list2" viewBox="0 0 32 32">
+						<use xlink:href="#icon-list2"></use>
+					</svg>
+				</div>
+				Comments
+			</h2>
+		</header>
+		<div class="module-body">
+      <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="" data-title="{{ post.title }}" data-url="{{ post.url | prepend : site.baseurl}}"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  `<script type="text/javascript">
+  var duoshuoQuery = {short_name:"birdshark"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>`
+  <!-- 多说公共JS代码 end -->
+		</div>
+	</div>
+</div>
