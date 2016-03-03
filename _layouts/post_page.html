@@ -13,8 +13,9 @@
         {{ content }}
       </div>
 
-
+	{% if page.layout == "post" %}
       {% include comment.html %}
+	{% endif %}
 
       {% include aside.html %}
 

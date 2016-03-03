@@ -1,0 +1,45 @@
+---
+layout: null
+---
+
+
+{% assign post_title = 'birdshark' | upcase %}
+{{ post_title }}
+
+{% assign template = 'sdasdasdas'%}
+{% case template %}
+{% when 'label' %}
+     111
+{% when 'product' %}
+     222
+{% else %}
+    3333
+{% endcase %}
+
+
+
+{% cycle '1' : 'you','me','him'%}
+{% cycle '1' : 'you','me','him'%}
+{% cycle '1' : 'you','me','him'%}
+{% cycle '2' : 'you','me','her'%}
+{% cycle '2' : 'you','me','her'%}
+{% cycle '2' : 'you','me','her'%}
+
+
+{%for a in site.data.letters%}
+{%if a.i == '4' %}
+{%continue%}
+{%endif%}
+{{a.i}}
+{%endfor%}
+{%assign statment = 'this is a statment'%}
+
+
+{% assign abc = "<p>wocaowocao</p>" %}
+{% assign edf = "<p>nimanima</p>" %}
+
+{{abc|escape_once}}
+{{abc}}
+{{edf|escape}}
+{{edf}}
+

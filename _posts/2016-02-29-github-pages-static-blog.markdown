@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "github-pages静态blog"
+title:  "github-pages-static-blog"
 date:   2016-2-29 15:58:00
 tags: markdown github-pages
 categories: jekyll
 ---
 
 
->学而有术是谓兴,
->学而无术是无心.
->不学无术要不得,
->不学有术是神棍.
+>学而有术是谓兴,  
+>学而无术是无心.  
+>不学无术要不得,  
+>不学有术是神棍.  
 
 
 <!-- more -->
