@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "jekyll-basic-used"
+title:  "jekyll基本使用方法"
 date:   2016-3-1 17:30:00
 categories: jekyll
 tags: jekyll liquid

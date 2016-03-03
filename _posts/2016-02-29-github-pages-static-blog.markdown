@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "github-pages-static-blog"
+title:  "github-pages-静态博客搭建"
 date:   2016-2-29 15:58:00
 tags: markdown github-pages
 categories: jekyll
