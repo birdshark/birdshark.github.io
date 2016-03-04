@@ -136,7 +136,7 @@ this year
 {{ item }}  
 {%endfor%}
 
-找了下，Liquid没有提供在此类模板中定义数组的方法，不过还有一个方法可行。那就是在根目录创建_data文件夹，支持`.yml`,`.yaml`,`.json`,'csv'4种文件格式。要用的时候呢`site.data.'filename'`,如果我在_data目录下面创建了一个letters.csv,那么site.data.letters就可获取到数组
+找了下，Liquid没有提供在此类模板中定义数组的方法，不过还有一个方法可行。那就是在根目录创建_data文件夹，支持`.yml`,`.yaml`,`.json`,`csv`4种文件格式。要用的时候呢`site.data.'filename'`,如果我在_data目录下面创建了一个`letters.csv`,那么`site.data.letters`就可获取到数组
 csv内容如下:
 
 >i,v  
