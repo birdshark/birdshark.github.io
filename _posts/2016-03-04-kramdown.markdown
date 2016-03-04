@@ -7,32 +7,237 @@ tags: markdown
 ---
 
 
->此版本的jekyll搭载的markdown解释器是karmadown-1.9，跟其他markdown的解释器可能会有一点差异
+>此版本的jekyll搭载的markdown解释器是kramdown-1.9，跟其他markdown的解释器可能会有一点差异
 
 ## markdown的基本使用方法 ##
 
-### 1.标题
+### 1. 标题
+
+书写方式: `##`、`###` + 空格 + 内容
+
     ## 大标题
     ### 小标题
+    #### 超小标题
+    超大标题   //等于号写于文章下方
+    ===
+    标题      //同超大标题
+    ---
+    
+效果:  
 
 > ## 大标题
-> > ### 小标题
 
-`ps: 标题两侧空格不必须,但是如果是要上传到github作为文章的话,则必须要有.`
+> ### 小标题
+
+> #### 超小标题
+
+> 超大标题
+===
+
+> 标题
+---
+
+
+`ps: 标题左侧空格不必须,但是如果是要上传到github作为文章的话,则必须要有.`
 
 ### 2.行内代码
-    `代码`
 
->`代码`
+    `这个符号在1的左边`
 
-### 3.引用
-    > 11111
-    > > 1111111
+>`这个符号在1的左边`
+
+### 3. 引用
+书写方式: `>`、`> >` + 空格 + 内容
+
+A.单层引用
+
+    >第一行>开头+两个空格换行
+    第二行不必再写>
+
+效果  
+
+>第一行>开头+两个空格换行  
+第二行不必再写>
+
+B.叠层引用
+    
+    > This is the first level of quoting.
+    >
+    > > This is nested blockquote.
+    >
+    > Back to the first level.
+
+效果  
 
 > This is the first level of quoting.
+>
 > > This is nested blockquote.
+>
 > Back to the first level.
 
+### 4. 列表
+
+#### A.无序列表
 
 
+
+书写方式 `*`、`-`、`+` + 空格 + 内容  
+
+    * Red
+    * Green
+    * Blue
+    
+    - Red
+    - Green
+    - Blue
+    
+    + Red
+    + Green
+    + Blue
+
+效果:(三种方式效果一样)  
+
+*   Red
+*   Green
+*   Blue
+    
+-   Red
+-   Green
+-   Blue
+    
++   Red
++   Green
++   Blue
+
+#### B.有序列表
+
+书写方式 `数字` + 空格 + 内容  
+
+    1. 这是第一个
+    1. 这是第二个
+    1. 这是第三个
+
+效果:(会自动排序)  
+
+>1. 这是第一个  
+1. 这是第二个  
+1. 这是第三个  
+
+
+### 5. 分割线
+书写方式: `***`、`---`、`\n +> + \n`
+
+    * * *
+    ***
+    *****
+    - - -
+    ---
+    
+    >
+    
+
+效果:  
+
+* * *
+***
+*****
+- - -
+---------------------------------------
+---
+
+>
+
+### 6. 超链接
+书写方式: `[title](href)`
+    
+    [markdown-syntax](http://daringfireball.net/projects/markdown/syntax)
+
+效果
+
+>[markdown-syntax](http://daringfireball.net/projects/markdown/syntax)
+
+`以变量的方式定义超链接`  
+书写方式`[var_name]: url "title"`
+
+    [id]: http://example.com/  "Optional Title Here"
+    This is [an example][id] reference-style link.
+
+效果:  
+
+>[id]: http://example.com/  "Optional Title Here"
+This is [an example][id] reference-style link.
+
+
+
+### 7. 强调(加粗，斜体)
+书写方式: `*内容*`、`**内容**`、`_内容_`、`__内容__`,
+
+    *内容*
+    **内容**
+    _内容_
+    __内容__
+
+效果:  
+
+>*内容*  
+**内容**  
+_内容_  
+__内容__  
+
+### 8. 图片引用
+书写方式:`![alt](图片路径)`
+    
+    ![这是张图片](/images/eg.jpg)
+
+效果:
+![这是张图片](/images/eg.jpg)
+这个跟超链一样都可以设置定义变量
+
+    [id]: url/to/image  "Optional title attribute"
+    ![hahah][id]
+
+效果
+
+[id]: /images/eg.jpg  "aaa"
+![hahah][id]
+
+
+### 9. 杂项
+
+#### A.简单超链接
+
+    <http://example.com/>
+
+效果:
+
+><http://example.com/>
+
+#### B.简单email地址
+
+    <xiazhichao75@126.com>
+
+效果:
+
+><xiazhichao75@126.com>
+
+### 10. 代码块
+
+书写方式:`四个空格` or `Tab`
+
+        四个空格
+        一个tab
+    
+效果:
+
+    四个空格
+    一个tab
+    
+## 结语
+
+markdown的课也布的差不多了，希望对你们有所帮助
+
+
+参考链接  
+<http://kramdown.gettalong.org/converter/kramdown.html>
+<http://daringfireball.net/projects/markdown/syntax>
 
