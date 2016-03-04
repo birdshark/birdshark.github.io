@@ -49,7 +49,7 @@ new '目录' --force`强制创建
 
 ## Liquid标签 ##
 
-###1. `assign` - 赋值标签###  
+### 1. assign - 赋值标签###  
 
 {% raw %}
 >  {% assign post_title = post.title %}  
@@ -59,7 +59,7 @@ new '目录' --force`强制创建
 
 {% endraw %}
 
-###2. `capture` - 解析代码块，将结果赋值给一个变量###  
+### 2. capture - 解析代码块，将结果赋值给一个变量###  
 
 这个标签跟ThinkPhP里边的fetch方法类似，解析标签后获取的模板内容
 
@@ -72,7 +72,7 @@ new '目录' --force`强制创建
 
 {% endraw %}
 
-###3. `case` - 开关标签###  
+### 3. case - 开关标签###  
 
 `switch case` 与 `case when`相比,后者不用break断开开关了  
 
@@ -98,7 +98,7 @@ yellowblue
 
 {%endraw%}
 
-###4. `comment` - 注释标签###
+### 4. comment - 注释标签###
 
 {% raw %}
 >We made 1 million dollars  
@@ -109,7 +109,7 @@ this year
 
 {% endraw %}
 
-###5. `cycle` - 交替循环###
+### 5. cycle - 交替循环###
 
 单组交替循环  
 
@@ -128,7 +128,7 @@ this year
 
 {% endraw %}
 
-###6. `for` - for循环###
+### 6. for - for循环###
 
 {% raw %}
 >{% for item in array %}  
@@ -154,7 +154,7 @@ csv内容如下:
 {%endfor%}  
 
 {% endraw %}
-###7. `break` - 中断for循环###
+### 7. break - 中断for循环###
 
 {%raw%}
 >{%for a in site.data.letters%}  
@@ -166,7 +166,7 @@ csv内容如下:
 
 {%endraw%}
 
-###8. `continue` 中断当前循环跳到下一次循环
+### 8. continue 中断当前循环跳到下一次循环
 
 {%raw%}
 >{%for a in site.data.letters%}  
@@ -179,7 +179,7 @@ csv内容如下:
 {%endraw%}
 
 
-###9. `if` - 条件判断###
+### 9. if - 条件判断###
 
 操作符可以是 `>`,`<`,`=`,`!=`,`contains`,连接操作符 `and`,`or`
 
@@ -192,14 +192,14 @@ csv内容如下:
 
 {%endraw%}
 
-###10. `include` - 引入文件###
+### 10. include - 引入文件###
 
 {%raw%}
 >{%include xxx.html%}
 
 {%endraw%}
 
-###11. `raw` - 暂时禁用标签处理.###  
+### 11. raw - 暂时禁用标签处理.###  
 
 以下代码需要用`{/ raw /} {/ endraw /}`包起来才不会被执行，当然为了能看到这端代码 ，我只得用`/`代替`%`了
 
@@ -213,7 +213,7 @@ csv内容如下:
 
 {%endraw%}
 
-###12. `unless` - if的镜像方法###
+### 12. unless - if的镜像方法###
 
 {%raw%}
 >{%unless condition%}  
@@ -222,7 +222,7 @@ something
 {%endunless%}
 {%endraw%}
 
-###13. 标准过滤器 ###
+### 13. 标准过滤器 ###
 
 `date` - 日期函数  
 `capitalize` - 首字母大写  
