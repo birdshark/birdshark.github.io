@@ -45,6 +45,7 @@ new '目录' --force`强制创建
 启动服务成功后他会提示你`Server address: [http://127.0.0.1:4000/](http://127.0.0.1:4000/)`。
 在浏览器中地址栏中输入localhost:4000即可访问demo的首页
 
+>
 
 ## Liquid标签 ##
 
@@ -93,9 +94,6 @@ black
 {% else %}  
 yellowblue  
 {% endcase %}
-
-
-
 
 {%endraw%}
 
@@ -268,6 +266,8 @@ something
 `default` - 默认值  
 以上标准过滤器用例皆可[在这里](http://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date)找到。
 好了关于Liquid的部分就介绍到这里
+
+>
 
 ## post页面定义 ##
 
