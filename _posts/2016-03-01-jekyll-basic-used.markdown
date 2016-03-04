@@ -49,21 +49,21 @@ new '目录' --force`强制创建
 
 ## Liquid标签 ##
 
-###1. `assign` - 赋值标签###
-{% raw %}
+###1. `assign` - 赋值标签###  
 
+{% raw %}
 >  {% assign post_title = post.title %}  
 {{ post_title }}  
 {% assign post_title = 'birdshark' | upcase %}  
-{{ post_title }}  
+{{ post_title }}
 
 {% endraw %}
 
-###2. `capture` - 解析代码块，将结果赋值给一个变量###
+###2. `capture` - 解析代码块，将结果赋值给一个变量###  
 
 这个标签跟ThinkPhP里边的fetch方法类似，解析标签后获取的模板内容
-{% raw %}
 
+{% raw %}
 >{% assign i = 1 %}  
 {% capture attribute_name %}  
 {{ post.title | handleize }}-{{ i }}-color  
@@ -72,10 +72,11 @@ new '目录' --force`强制创建
 
 {% endraw %}
 
-###3. `case` - 开关标签###
-`switch case` 与 `case when`相比,后者不用break断开开关了
-{%raw%}
+###3. `case` - 开关标签###  
 
+`switch case` 与 `case when`相比,后者不用break断开开关了  
+
+{%raw%}
 >{% case condition %}  
 {% when 1 %}  
 hit 1  
@@ -105,17 +106,19 @@ yellowblue
 you can not see me in the html  
 {% endcomment %}  
 this year
+
 {% endraw %}
 
 ###5. `cycle` - 交替循环###
-单组交替循环
+
+单组交替循环  
+
 {% raw %}
 >{%cycle 'you','me','him'%}  
 {%cycle 'you','me','him'%}  
-{%cycle 'you','me','him'%}  
+{%cycle 'you','me','him'%}
 
 多组交替循环
-
 >{% cycle '1' : 'you','me','him'%}  
 {% cycle '1' : 'you','me','him'%}  
 {% cycle '1' : 'you','me','him'%}  
@@ -128,9 +131,9 @@ this year
 ###6. `for` - for循环###
 
 {% raw %}
-
 >{% for item in array %}  
-{{ item }}  
+{{ item }}
+  
 {%endfor%}
 
 找了下，Liquid没有提供在此类模板中定义数组的方法，不过还有一个方法可行。那就是在根目录创建_data文件夹，支持`.yml`,`.yaml`,`.json`,'csv'4种文件格式。要用的时候呢`site.data.'filename'`,如果我在_data目录下面创建了一个letters.csv,那么site.data.letters就可获取到数组
@@ -154,7 +157,6 @@ csv内容如下:
 ###7. `break` - 中断for循环###
 
 {%raw%}
-
 >{%for a in site.data.letters%}  
 {%if a.i == '4' %}  
 {%break%}  
@@ -167,7 +169,6 @@ csv内容如下:
 ###8. `continue` 中断当前循环跳到下一次循环
 
 {%raw%}
-
 >{%for a in site.data.letters%}  
 {%if a.i == '4' %}  
 {%continue%}  
@@ -194,16 +195,15 @@ csv内容如下:
 ###10. `include` - 引入文件###
 
 {%raw%}
-
 >{%include xxx.html%}
 
 {%endraw%}
 
-###11. `raw` - 暂时禁用标签处理.###
+###11. `raw` - 暂时禁用标签处理.###  
+
 以下代码需要用`{/ raw /} {/ endraw /}`包起来才不会被执行，当然为了能看到这端代码 ，我只得用`/`代替`%`了
 
 {%raw%}
-
 >{%for a in site.data.letters%}  
 {%if a.i == '4' %}  
 {%continue%}  
