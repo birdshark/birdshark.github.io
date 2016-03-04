@@ -274,7 +274,7 @@ something
 ### 1. 头部参数 ###  
 
 	`layout` 文章模板,对应_layouts文件夹下的同名文件  
-	`title`  文章标题,对应`'yyyy-mm-dd-filename.markdown'`中的`filename`  
+	`title`  文章标题
 	`date`   文章创建时间。这个随便写，但是要理智  
 	`categories`  文章分类  
 	`tags`  文章标签，可以是多个值，中间以空格隔开  
@@ -283,7 +283,8 @@ something
 当然你也可定制一些其他的参数,只要你觉得合适  
 
 ### 2. 内容赋值 ###  
-	了解了那么多，那么当一个post被创建有哪些参数可以供给我们使用呢？  
+了解了那么多，那么当一个post被创建有哪些参数可以供给我们使用呢？  
+
 	A. site  
 site一般是定义在_config.yml里面的参数，像`site.title`，`site.username`等，但是还有些比较有用的,像`site.categories`代表所有的分类,`site.tags`代表所有的标签，`site.posts`代表所有的文章  
 	B. page  

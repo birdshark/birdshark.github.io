@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "markdown的基本使用方法"
+date:   2016-3-4 11:13:00 +0800
+categories: jekyll
+tags: markdown
+---
+
+
+>此版本的jekyll搭载的markdown解释器是karmadown-1.9，跟其他markdown的解释器可能会有一点差异
+
+## markdown的基本使用方法 ##
+
+### 1.标题
+    ## 大标题
+    ### 小标题
+
+> ## 大标题
+> > ### 小标题
+
+`ps: 标题两侧空格不必须,但是如果是要上传到github作为文章的话,则必须要有.`
+
+### 2.行内代码
+    `代码`
+
+>`代码`
+
+### 3.引用
+    > 11111
+    > > 1111111
+
+> This is the first level of quoting.
+> > This is nested blockquote.
+> Back to the first level.
+
+
+
+
