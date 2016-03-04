@@ -271,7 +271,7 @@ something
 
 ## post页面定义 ##
 
-1. 头部参数  
+###1. 头部参数###  
 	`layout` 文章模板,对应_layouts文件夹下的同名文件  
 	`title`  文章标题,对应`'yyyy-mm-dd-filename.markdown'`中的`filename`  
 	`date`   文章创建时间。这个随便写，但是要理智  
@@ -280,7 +280,7 @@ something
 	`published`  是否发布 `true` or `false`  
 	`permalink` 相当于url的rewrite  
 当然你也可定制一些其他的参数,只要你觉得合适  
-2. 内容赋值  
+###2. 内容赋值###  
 	了解了那么多，那么当一个post被创建有哪些参数可以供给我们使用呢？  
 	A. site  
 site一般是定义在_config.yml里面的参数，像`site.title`，`site.username`等，但是还有些比较有用的,像`site.categories`代表所有的分类,`site.tags`代表所有的标签，`site.posts`代表所有的文章  
@@ -288,7 +288,7 @@ site一般是定义在_config.yml里面的参数，像`site.title`，`site.usern
 page这是页面级别的元素了，头部参数存放在page数组里面
 
 
-3.摘录配置  
+###3.摘录配置###  
 一般来说，首页不会将文章的全部都放出来，而是取一部分出来，那怎么做到这样的效果呢，jekyll很人性化，不要你去写什么额外的函数只需要在`_config.yml`里添加一行
 {% highlight ruby %}
 {%raw%}
@@ -297,7 +297,7 @@ excerpt_separator: <!-- more -->
 {% endhighlight %}
 然后在post中适当的位置加上 `<!-- more -->`就可以获取文章的摘要了
 
-4.分页配置  
+###4.分页配置###  
 `_config.yml`中加入一下参数
 {%highlight ruby%}
 gems: [jekyll-paginate]
@@ -335,8 +335,12 @@ post中使用
 {%endraw%}
 {% endhighlight %}
 
-##结语##
-关于jekyll部分就介绍到这里。
+>
+
+##结语##  
+此篇文章粗略的介绍了一下jekyll和liquid的用法，以及相关的参数，多少都是有些帮助吧，要想了解更多的知识还请移步以下参考链接。
+
+>
 
 参考链接  
 [https://jekyllrb.com/](https://jekyllrb.com/)  
