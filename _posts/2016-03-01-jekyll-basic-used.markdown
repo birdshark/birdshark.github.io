@@ -42,15 +42,13 @@ new '目录' --force`强制创建
 2. *.markdown -> html
 3. xml(Liquid标签) -> xml (纯粹)
 
-启动服务成功后他会提示你`Server address: http://127.0.0.1:4000/`。
+启动服务成功后他会提示你`Server address: [http://127.0.0.1:4000/](http://127.0.0.1:4000/)`。
 在浏览器中地址栏中输入localhost:4000即可访问demo的首页
 
->
 
 ## Liquid标签 ##
 
 ###1. `assign` - 赋值标签###
-
 {% raw %}
 
 >  {% assign post_title = post.title %}  
@@ -66,7 +64,9 @@ new '目录' --force`强制创建
 {% raw %}
 
 >{% assign i = 1 %}  
-{% capture attribute_name %}{{ post.title | handleize }}-{{ i }}-color{% endcapture %}  
+{% capture attribute_name %}  
+{{ post.title | handleize }}-{{ i }}-color  
+{% endcapture %}  
 {{ attribute_name }}
 
 {% endraw %}
@@ -102,7 +102,11 @@ yellowblue
 ###4. `comment` - 注释标签###
 
 {% raw %}
->We made 1 million dollars {% comment %} you can not see me in the html {% endcomment %} this year
+>We made 1 million dollars  
+{% comment %}  
+you can not see me in the html  
+{% endcomment %}  
+this year
 {% endraw %}
 
 ###5. `cycle` - 交替循环###
@@ -264,8 +268,6 @@ something
 `default` - 默认值  
 以上标准过滤器用例皆可[在这里](http://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date)找到。
 好了关于Liquid的部分就介绍到这里
-
->
 
 ## post页面定义 ##
 

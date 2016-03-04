@@ -71,12 +71,12 @@ li {
 }
 
 blockquote {
-	margin-left: $side-padding;
-	font-style: italic;
-	color: $gray;
-  border-left: 1rem solid #222222;
+  margin-left: $side-padding;
+  color: #f8f8f8;
+  border-left: 1rem solid #333333;
+  font-family: Consolas, Monaco, 'Andale Mono', sans-serif;
   padding: 0.1rem 0.2rem 0.1rem 1rem;
-  background: #111111;
+  background: #222222;
 }
 
 .blockquote-footer {
