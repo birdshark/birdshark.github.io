@@ -10,7 +10,6 @@ tags: markdown
 >此版本的jekyll搭载的markdown解释器是kramdown-1.9，跟其他markdown的解释器可能会有一点差异
 
 <!-- more -->
-## markdown的基本使用方法 ##
 
 ### 1. 标题
 
