@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "杂项"
+date:   2016-3-16 11:13:00
+categories: skill
+tags: mass
+---
+
+
+
+Step 1. Create a trait called as you desire, in example:
+
+    namespace YourProjectNamespace;
+    trait ClassEmulationTrait {
+        static function class(){
+                return __CLASS__;
+        }
+    }
+Step 2. Use this trait within each class you need to emulate the ::class method.
+
+    namespace YourProjectNamespace;
+    class UserRepository{
+        use ClassEmulationTrait;
+    }
+Later in your code you could use:
+
+     echo YourProjectNamespace\UserRepository::class();

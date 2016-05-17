@@ -1,0 +1,167 @@
+---
+layout: post
+title:  "SimpleSAMLphp实现单点登录"
+date:   2016-3-16 11:13:00
+categories: skill
+tags: SSO
+---
+
+
+>前段日子，某去投机，结果遇到被问到SSO，就这几年的工作经验实在是没有应用过这种玩意，正好近来闲得发慌，找了些资料研究了一番
+
+##简介
+
+SAML Security Assertion Markup Language
+安全领域中用来交换认证和授权数据的标准，它是一种基于XML的协议，
+在验证器，消费者，和服务器之间使用安全令牌包含断言来传递主要信息。
+SAML2.0支持基于web的认证和授权，包括跨域单点登录，有助于减少向用户分发多个身份验证令牌的管理开销
+
+<!-- more -->
+
+##工作流程
+
+见下图
+
+![saml][1]
+
+
+##SimpleSAMLphp
+这是GOOGLE找出来的一款基于PHP的SAML认证系统，某研究了将近一个星期，把基本的配置和流程摸得差不多了
+
+`config.php`配置修改
+
+	'auth.adminpassword'=>'xxxxxxxx',//随机,只要不跟以前一样
+	//Win上装了MINGW运行下面命令可生成33位随机字符串用作辅助加密
+	//tr -c -d '0123456789abcdefghijklmnopqrstuvwxyz' </dev/urandom | dd bs=32 count=1 2>/dev/null;
+	'secretsalt' => '1igh1ed3xtv5x2d4pkke0ojpl6naahth',
+	//配上本机mysql
+	'database.dsn' => 'mysql:host=localhost;dbname=saml',
+    'database.username' => 'root',
+    'database.password' => '',
+	//打开saml2验证器
+	'enable.saml20-idp' => true,
+	//以下3个模块，需要设置成可以访问
+	'module.enable' => array(
+        // Setting to TRUE enables.
+        'exampleauth' => TRUE,
+        // Setting to FALSE disables.
+        'saml' => TRUE,
+        // Unset or NULL uses default.
+        'core' => TRUE,
+    ),
+	//设置Session的域名
+	'session.cookie.domain' => '.xxxx.com',
+	//验证器流程控制
+	'authproc.sp' => array(
+		//服务器发送元数据使用的属性图，对应attributemap目录下面的文件
+		10 => array(
+             'class' => 'core:AttributeMap', 'addurnprefix'
+         ),
+		//允许自动生成TargetID
+		20 => 'core:TargetedID',
+		//语言适配
+		30 => 'core:LanguageAdaptor',
+		//添加界定属性
+		40 => 'core:AttributeRealm',
+		45 => array(
+            'class'         => 'core:StatisticsWithAttribute',
+            'attributename' => 'realm',
+            'type'          => 'saml20-idp-SSO',
+        ),
+		//属性校验
+		50 => 'core:AttributeLimit',
+		//属性修改
+		60 => array(
+            'class' => 'core:AttributeAlter',
+            'pattern' => '/OU=studerende/',
+            'replacement' => 'Student',
+            'subject' => 'distinguishedName',
+            '%replace',
+        ),
+		//认证确认
+		90 => array(
+            'class' => 'consent:Consent',
+            'store' => 'consent:Cookie',
+            'focus' => 'yes',
+            'checked' => TRUE
+        ),
+		//语言输配
+		99 => 'core:LanguageAdaptor',
+	),
+	//服务器流程控制
+	'authproc.sp' => array(
+		//同上
+		10 => array(
+            'class' => 'core:AttributeMap', 'removeurnprefix'
+        ),
+		//
+		60 => array(
+            'class' => 'core:GenerateGroups', 'eduPersonAffiliation'
+        ),
+		//添加属性
+        61 => array(
+            'class' => 'core:AttributeAdd', 'groups' => array('users', 'members')
+        ),
+		//同上
+		90 => 'core:LanguageAdaptor',
+	),
+	
+以上对`config.php`里的比较关键的参数做了个说明，配置好这些后接下来就要配置`authsources.php`
+	//服务器配置
+	'default-sp'=>array(
+		//指定认证源
+		'saml:SP',
+		//服务器元数据
+		'entityID' => 'http://sp.saml2.com/module.php/saml/sp/metadata.php/sp',
+		//验证器元数据
+		'idp' => 'http://idp.saml.com/saml2/idp/metadata.php',
+		//
+		'discoURL' => null,
+	),
+	//验证源
+	'example-sql' => array(
+        'sqlauth:SQL',
+        'dsn' => 'mysql:host=127.0.0.1;port=3306;dbname=saml',
+        'username' => 'root',
+        'password' => '',
+        'query' => 'SELECT uid, givenName, email, eduPersonPrincipalName FROM users WHERE uid = :username AND password = SHA2(CONCAT((SELECT salt FROM users WHERE uid = :username), :password),256);',
+    ),
+
+当然你可以使用静态的验证源`example-static`，我这是为了跟数据库结合起来使用,建表脚本
+	
+	CREATE TABLE `users` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `uid` varchar(64) NOT NULL,
+	  `givenName` varchar(64) NOT NULL,
+	  `email` varchar(128) NOT NULL,
+	  `eduPersonPrincipalName` varchar(128) NOT NULL,
+	  `salt` varchar(33) NOT NULL,
+	  `password` varchar(512) NOT NULL,
+	  PRIMARY KEY (`id`)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+要是不知道密码填什么，就运行下
+	SELECT SHA2(CONCAT((SELECT `盐` FROM users WHERE uid = `'用户名'`), `'明文密码'`),256);
+salt自己定，随便点也可以，这个主要用来测试
+
+再来就是配置metadata了,因为我们用的是SAML2做数据交换验证
+主要涉及的文件有以下三个`saml20-sp-remote.php`，`saml20-idp-remote.php`，`saml20-idp-hosted.php`
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1]: /images/saml.jpg "xxxxxx"
