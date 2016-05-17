@@ -15,13 +15,15 @@ Step 1. Create a trait called as you desire, in example:
         static function class(){
                 return __CLASS__;
         }
-    }
+    }  
+
 Step 2. Use this trait within each class you need to emulate the ::class method.
 
     namespace YourProjectNamespace;
     class UserRepository{
         use ClassEmulationTrait;
-    }
+    }  
+
 Later in your code you could use:
 
      echo YourProjectNamespace\UserRepository::class();
