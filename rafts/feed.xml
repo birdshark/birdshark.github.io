@@ -6,25 +6,45 @@
 </description>
     <link>http://birdshark.github.io/</link>
     <atom:link href="http://birdshark.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 May 2016 17:24:31 +0800</pubDate>
-    <lastBuildDate>Tue, 24 May 2016 17:24:31 +0800</lastBuildDate>
+    <pubDate>Thu, 28 Jul 2016 11:25:28 +0800</pubDate>
+    <lastBuildDate>Thu, 28 Jul 2016 11:25:28 +0800</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
-        <title>Java Tips</title>
-        <description>&lt;hr /&gt;
-&lt;p&gt;layout: post
-title: “”
-date: 2016-05-24 17:04:00 +0800
-categories: skill
-tags: java
-———-&lt;/p&gt;
+        <title>mysql-tips</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;第三方登录库FACEBOOK接入问题,各种问题让人摸不到门&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;GFW不允许通过，设置CURL代理&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;curl_setopt($ch,CURLOPT_PROXY,’127.0.0.1’);&lt;br /&gt;
+curl_setopt($ch,CURLOPT_PROXYPORT,’8787’);&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;入职一个月，学到什么了呢
+1. 怎么接入paypal-php-sdk
+2. 怎么申请paypal开发者账号，还有测试账号。
+3. 怎么申请google,facebook,twitter的第三方登录
+4. 怎么灵活运用TP3.2的国际化功能，来达到各个版本之间的灵活切换，而不影响功能
+5. swiper框架的使用，wechat-jssdk的使用&lt;/p&gt;
+
+&lt;p&gt;下面是个人的一些想法，工作周例会时，头儿老是强调去研究api，然后自己编码，我觉得这个不是很必要。尽管这样会弱化(?)你的编码能力。
+但是在我看来，这之中未必没有让你觉得受益的地方。
+1. 让别人写的更融洽的结合到现有的环境，这需要一定的功力
+2. 使用的过程中会接触的别人的代码，scan code，可以了解他人的设计思路，学习他人的编码技巧。
+3. github上那么多的库，建库的目的是什么，就是为了便捷开发，节约成本，特别是对于一些国外的产品，同时你的英文水平有不甚高。这个时候当如何。找找歪国人写的api总是没错的，为什么，对api的理解很容易。这样可以减少出错的概率。&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 24 May 2016 00:00:00 +0800</pubDate>
-        <link>http://birdshark.github.io/2016/05/24/java-tips.html</link>
-        <guid isPermaLink="true">http://birdshark.github.io/2016/05/24/java-tips.html</guid>
+        <pubDate>Wed, 11 May 2016 17:21:00 +0800</pubDate>
+        <link>http://birdshark.github.io/skill/2016/05/11/php-oauth-tips.html</link>
+        <guid isPermaLink="true">http://birdshark.github.io/skill/2016/05/11/php-oauth-tips.html</guid>
         
+        <category>php</category>
+        
+        
+        <category>skill</category>
         
       </item>
     
@@ -35,10 +55,14 @@ tags: java
 &lt;/blockquote&gt;
 
 &lt;p&gt;外键关联表数据删除限制
-SET FOREIGN_KEY_CHECKS = 0;
-TRUNCATE TABLE table_name;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;SET FOREIGN_KEY_CHECKS = 0;&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;TRUNCATE TABLE table_name;&lt;/code&gt;
 当然操作完成后还是得将设置还原
-SET FOREIGN_KEY_CHECKS = 1;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;SET FOREIGN_KEY_CHECKS = 1;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;mysql多主模式情况下,当有一台主机down机,重启后可能会发生主键冲突，若是以自增长做主键，
+可以考虑设定规则，使得各主机之间的生产主键的规律各不相同
+若是对主键没有太多要求可以使用unique函数生成id&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 May 2016 17:21:00 +0800</pubDate>
         <link>http://birdshark.github.io/skill/2016/05/11/mysql-tips.html</link>
@@ -53,7 +77,12 @@ SET FOREIGN_KEY_CHECKS = 1;&lt;/p&gt;
     
       <item>
         <title>杂项</title>
-        <description>&lt;p&gt;Step 1. Create a trait called as you desire, in example:&lt;/p&gt;
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;做这篇小记缘何，是时项目由Laravel5.0至Laravel5.1跨度很大，主要体现在class的引用方式,下面是一种解决方法，但是实用性不是很大
+值得一提的是这个&lt;code class=&quot;highlighter-rouge&quot;&gt;trait&lt;/code&gt;使用技巧&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;step-1-create-a-trait-called-as-you-desire-in-example&quot;&gt;Step 1. Create a trait called as you desire, in example:&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;namespace YourProjectNamespace;
 trait ClassEmulationTrait {
@@ -64,7 +93,7 @@ trait ClassEmulationTrait {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Step 2. Use this trait within each class you need to emulate the ::class method.&lt;/p&gt;
+&lt;h3 id=&quot;step-2-use-this-trait-within-each-class-you-need-to-emulate-the-class-method&quot;&gt;Step 2. Use this trait within each class you need to emulate the ::class method.&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;namespace YourProjectNamespace;
 class UserRepository{
@@ -73,7 +102,7 @@ class UserRepository{
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Later in your code you could use:&lt;/p&gt;
+&lt;h3 id=&quot;step-3-later-in-your-code-you-could-use&quot;&gt;Step 3. Later in your code you could use:&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; echo YourProjectNamespace\UserRepository::class();
 &lt;/code&gt;&lt;/pre&gt;
@@ -96,8 +125,7 @@ class UserRepository{
   &lt;p&gt;前段日子，某去投机，结果遇到被问到SSO，就这几年的工作经验实在是没有应用过这种玩意，正好近来闲得发慌，找了些资料研究了一番&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;##简介&lt;/p&gt;
-
+&lt;h3 id=&quot;section&quot;&gt;简介&lt;/h3&gt;
 &lt;p&gt;SAML Security Assertion Markup Language
 安全领域中用来交换认证和授权数据的标准，它是一种基于XML的协议，
 在验证器，消费者，和服务器之间使用安全令牌包含断言来传递主要信息。
@@ -105,14 +133,14 @@ SAML2.0支持基于web的认证和授权，包括跨域单点登录，有助于�
 
 &lt;!-- more --&gt;
 
-&lt;p&gt;##工作流程&lt;/p&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;工作流程&lt;/h3&gt;
 
 &lt;p&gt;见下图&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/saml.jpg&quot; alt=&quot;saml&quot; title=&quot;xxxxxx&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;##SimpleSAMLphp
-这是GOOGLE找出来的一款基于PHP的SAML认证系统，某研究了将近一个星期，把基本的配置和流程摸得差不多了&lt;/p&gt;
+&lt;h3 id=&quot;simplesamlphp&quot;&gt;SimpleSAMLphp&lt;/h3&gt;
+&lt;p&gt;这是GOOGLE找出来的一款基于PHP的SAML认证系统，某研究了将近一个星期，把基本的配置和流程摸得差不多了&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;config.php&lt;/code&gt;配置修改&lt;/p&gt;
 
@@ -239,7 +267,9 @@ SELECT SHA2(CONCAT((SELECT `盐` FROM users WHERE uid = `&#39;用户名&#39;`), 
         <link>http://birdshark.github.io/skill/2016/03/16/php-saml2.html</link>
         <guid isPermaLink="true">http://birdshark.github.io/skill/2016/03/16/php-saml2.html</guid>
         
-        <category>SSO</category>
+        <category>sso</category>
+        
+        <category>php</category>
         
         
         <category>skill</category>

@@ -1419,6 +1419,55 @@
 
     <div class="post-icon-image "></div>
 
+    <a href="/skill/2016/05/11/php-oauth-tips.html" class="post-title-link">
+      <h2 data-sr="enter left, hustle 20px">mysql-tips</h2>
+    </a>
+
+    <div class="post-date">2016年 05月 11日</div>
+
+    <div class="post-body">
+      <!---->
+      <blockquote>
+  <p>第三方登录库FACEBOOK接入问题,各种问题让人摸不到门</p>
+</blockquote>
+
+<p>GFW不允许通过，设置CURL代理</p>
+
+<blockquote>
+  <p>curl_setopt($ch,CURLOPT_PROXY,’127.0.0.1’);<br />
+curl_setopt($ch,CURLOPT_PROXYPORT,’8787’);</p>
+</blockquote>
+
+<p>入职一个月，学到什么了呢
+1. 怎么接入paypal-php-sdk
+2. 怎么申请paypal开发者账号，还有测试账号。
+3. 怎么申请google,facebook,twitter的第三方登录
+4. 怎么灵活运用TP3.2的国际化功能，来达到各个版本之间的灵活切换，而不影响功能
+5. swiper框架的使用，wechat-jssdk的使用</p>
+
+<p>下面是个人的一些想法，工作周例会时，头儿老是强调去研究api，然后自己编码，我觉得这个不是很必要。尽管这样会弱化(?)你的编码能力。
+但是在我看来，这之中未必没有让你觉得受益的地方。
+1. 让别人写的更融洽的结合到现有的环境，这需要一定的功力
+2. 使用的过程中会接触的别人的代码，scan code，可以了解他人的设计思路，学习他人的编码技巧。
+3. github上那么多的库，建库的目的是什么，就是为了便捷开发，节约成本，特别是对于一些国外的产品，同时你的英文水平有不甚高。这个时候当如何。找找歪国人写的api总是没错的，为什么，对api的理解很容易。这样可以减少出错的概率。</p>
+
+
+    </div>
+
+    <a class="read-more" href="/skill/2016/05/11/php-oauth-tips.html">
+       <span class="read-more-text">Read More</span>
+        <span class="cross">+</span>
+    </a>
+
+</div>
+
+
+
+
+  <div class="post">
+
+    <div class="post-icon-image "></div>
+
     <a href="/skill/2016/05/11/mysql-tips.html" class="post-title-link">
       <h2 data-sr="enter left, hustle 20px">mysql-tips</h2>
     </a>
@@ -1432,10 +1481,14 @@
 </blockquote>
 
 <p>外键关联表数据删除限制
-SET FOREIGN_KEY_CHECKS = 0;
-TRUNCATE TABLE table_name;
+<code class="highlighter-rouge">SET FOREIGN_KEY_CHECKS = 0;</code>
+<code class="highlighter-rouge">TRUNCATE TABLE table_name;</code>
 当然操作完成后还是得将设置还原
-SET FOREIGN_KEY_CHECKS = 1;</p>
+<code class="highlighter-rouge">SET FOREIGN_KEY_CHECKS = 1;</code></p>
+
+<p>mysql多主模式情况下,当有一台主机down机,重启后可能会发生主键冲突，若是以自增长做主键，
+可以考虑设定规则，使得各主机之间的生产主键的规律各不相同
+若是对主键没有太多要求可以使用unique函数生成id</p>
 
     </div>
 
@@ -1461,7 +1514,12 @@ SET FOREIGN_KEY_CHECKS = 1;</p>
 
     <div class="post-body">
       <!---->
-      <p>Step 1. Create a trait called as you desire, in example:</p>
+      <blockquote>
+  <p>做这篇小记缘何，是时项目由Laravel5.0至Laravel5.1跨度很大，主要体现在class的引用方式,下面是一种解决方法，但是实用性不是很大
+值得一提的是这个<code class="highlighter-rouge">trait</code>使用技巧</p>
+</blockquote>
+
+<h3 id="step-1-create-a-trait-called-as-you-desire-in-example">Step 1. Create a trait called as you desire, in example:</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>namespace YourProjectNamespace;
 trait ClassEmulationTrait {
@@ -1472,7 +1530,7 @@ trait ClassEmulationTrait {
 </code></pre>
 </div>
 
-<p>Step 2. Use this trait within each class you need to emulate the ::class method.</p>
+<h3 id="step-2-use-this-trait-within-each-class-you-need-to-emulate-the-class-method">Step 2. Use this trait within each class you need to emulate the ::class method.</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>namespace YourProjectNamespace;
 class UserRepository{
@@ -1481,7 +1539,7 @@ class UserRepository{
 </code></pre>
 </div>
 
-<p>Later in your code you could use:</p>
+<h3 id="step-3-later-in-your-code-you-could-use">Step 3. Later in your code you could use:</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code> echo YourProjectNamespace\UserRepository::class();
 </code></pre>
@@ -1515,8 +1573,7 @@ class UserRepository{
   <p>前段日子，某去投机，结果遇到被问到SSO，就这几年的工作经验实在是没有应用过这种玩意，正好近来闲得发慌，找了些资料研究了一番</p>
 </blockquote>
 
-<p>##简介</p>
-
+<h3 id="section">简介</h3>
 <p>SAML Security Assertion Markup Language
 安全领域中用来交换认证和授权数据的标准，它是一种基于XML的协议，
 在验证器，消费者，和服务器之间使用安全令牌包含断言来传递主要信息。
@@ -1593,7 +1650,7 @@ SAML2.0支持基于web的认证和授权，包括跨域单点登录，有助于�
 					
 					
 					<li>
-						<a class="bold" href="/category/skill">skill (4)</a>
+						<a class="bold" href="/category/skill">skill (5)</a>
 					</li>
 				
 			</ul>
@@ -1653,7 +1710,14 @@ SAML2.0支持基于web的认证和授权，包括跨域单点登录，有助于�
 					
 					
 					<a class="tag-label bold" href="/tag/sso">
-						SSO (1)
+						sso (1)
+					</a>
+				
+					
+					
+					
+					<a class="tag-label bold" href="/tag/php">
+						php (2)
 					</a>
 				
 					

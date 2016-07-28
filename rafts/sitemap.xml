@@ -3,9 +3,9 @@
   
     
     <url>
-      <loc>http://birdshark.github.io/2016/05/24/java-tips.html</loc>
+      <loc>http://birdshark.github.io/skill/2016/05/11/php-oauth-tips.html</loc>
       
-        <lastmod>2016-05-24T00:00:00+08:00</lastmod>
+        <lastmod>2016-05-11T17:21:00+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -141,7 +141,7 @@
     <url>
       <loc>http://birdshark.github.io/about/</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -156,112 +156,7 @@
     <url>
       <loc>http://birdshark.github.io/feed.xml</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/tag/github-pages/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/category/liquid/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/category/markdown/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/category/skill/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/category/jekyll/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/archives/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -276,7 +171,7 @@
     <url>
       <loc>http://birdshark.github.io/tag/jekyll/</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -289,24 +184,9 @@
   
     
     <url>
-      <loc>http://birdshark.github.io/tag/liquid/</loc>
+      <loc>http://birdshark.github.io/category/liquid/</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://birdshark.github.io/tag/markdown/</loc>
-      
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -319,9 +199,9 @@
   
     
     <url>
-      <loc>http://birdshark.github.io/tag/</loc>
+      <loc>http://birdshark.github.io/category/markdown/</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -334,9 +214,39 @@
   
     
     <url>
-      <loc>http://birdshark.github.io/404.html</loc>
+      <loc>http://birdshark.github.io/category/skill/</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/github-pages/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -351,7 +261,157 @@
     <url>
       <loc>http://birdshark.github.io/tag/java/</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/category/jekyll/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/archives/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/markdown/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/mass/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/mysql/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/php/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/sso/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/404.html</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://birdshark.github.io/tag/liquid/</loc>
+      
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -366,7 +426,7 @@
     <url>
       <loc>http://birdshark.github.io/css/main.css</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -383,7 +443,7 @@
     <url>
       <loc>http://birdshark.github.io/page2/</loc>
       
-        <lastmod>2016-05-24T17:24:31+08:00</lastmod>
+        <lastmod>2016-07-28T11:25:28+08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

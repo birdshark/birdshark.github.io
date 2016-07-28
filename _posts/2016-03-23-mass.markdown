@@ -6,9 +6,11 @@ categories: skill
 tags: mass
 ---
 
+>做这篇小记缘何，是时项目由Laravel5.0至Laravel5.1跨度很大，主要体现在class的引用方式,下面是一种解决方法，但是实用性不是很大
+值得一提的是这个`trait`使用技巧
 
 
-Step 1. Create a trait called as you desire, in example:
+### Step 1. Create a trait called as you desire, in example:
 
     namespace YourProjectNamespace;
     trait ClassEmulationTrait {
@@ -17,13 +19,13 @@ Step 1. Create a trait called as you desire, in example:
         }
     }  
 
-Step 2. Use this trait within each class you need to emulate the ::class method.
+### Step 2. Use this trait within each class you need to emulate the ::class method.
 
     namespace YourProjectNamespace;
     class UserRepository{
         use ClassEmulationTrait;
     }  
 
-Later in your code you could use:
+### Step 3. Later in your code you could use:
 
      echo YourProjectNamespace\UserRepository::class();

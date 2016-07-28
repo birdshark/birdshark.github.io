@@ -8,7 +8,7 @@
 
     <title>
         
-            jekyll基本使用方法 | In the Sky
+            mysql-tips | In the Sky
         
     </title>
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
@@ -20,7 +20,7 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/zenburn.css">
-    <link rel="canonical" href="http://birdshark.github.io/jekyll/2016/03/02/jekyll-basic-used.html">
+    <link rel="canonical" href="http://birdshark.github.io/skill/2016/05/11/php-oauth-tips.html">
 </head>
 
 
@@ -1415,8 +1415,8 @@
 
 	<div class="post-content-wrapper">
 		<header class="post-header">
-		<h1 data-sr="enter right" class="post-title">jekyll基本使用方法</h1>
-		<p class="post-meta">Mar 2, 2016</p>
+		<h1 data-sr="enter right" class="post-title">mysql-tips</h1>
+		<p class="post-meta">May 11, 2016</p>
 		
 		
 			<div class="post-categories">
@@ -1430,7 +1430,7 @@
 				
 					
 					
-						<a class="category-link" href="/category/jekyll">jekyll</a>
+						<a class="category-link" href="/category/skill">skill</a>
 					
 				
 			</div>
@@ -1442,352 +1442,28 @@
 
 		<article class="post-content">
 		<blockquote>
-  <p>本地jekyll环境搭好之后，现在要做的是如何去使用它，这篇文章将讲解如何去使用jekyll和一些模板语言的使用</p>
+  <p>第三方登录库FACEBOOK接入问题,各种问题让人摸不到门</p>
 </blockquote>
 
-<h2 id="jekyll">jekyll的使用方法</h2>
-
-<p>首先，你可以右键Git Bash here,前提是你安装了Git。如果没安装也没关系，使用命令提示符也可。创建一个jekyll项目<code class="highlighter-rouge">jekyll new '目录'</code>这个目录可以是<code class="highlighter-rouge">相对路径</code>也可以是<code class="highlighter-rouge">绝对路径</code>。
-如果’目录’里面还有其他的文件时，会提示创建失败，那么再加上–force,即<code class="highlighter-rouge">jekyll
-new '目录' --force</code>强制创建
-<!-- more -->
-创建成功后你会发现目录下面有</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">├──</span> <span class="n">_config</span><span class="p">.</span><span class="nf">yml</span>
-<span class="err">├──</span> <span class="n">_includes</span>
-   <span class="err">├──</span> <span class="n">footer</span><span class="p">.</span><span class="nf">html</span>
-   <span class="err">└──</span> <span class="n">header</span><span class="p">.</span><span class="nf">html</span>
-   <span class="p">.</span><span class="nf">.</span><span class="o">.</span>
-<span class="err">├──</span> <span class="n">_layouts</span>
-   <span class="err">├──</span> <span class="n">default</span><span class="p">.</span><span class="nf">html</span>
-   <span class="err">└──</span> <span class="n">post</span><span class="p">.</span><span class="nf">html</span>
-   <span class="p">.</span><span class="nf">.</span><span class="o">.</span>
-<span class="err">├──</span> <span class="n">_posts</span>
-   <span class="err">└──</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">03</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="n">welcome</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">jekyll</span><span class="p">.</span><span class="nf">markdown</span>
-<span class="err">├──</span> <span class="p">.</span><span class="nf">gitignore</span>
-<span class="err">├──</span> <span class="n">_config</span><span class="p">.</span><span class="nf">yml</span>
-<span class="err">├──</span> <span class="n">about</span><span class="p">.</span><span class="nf">md</span>
-<span class="err">├──</span> <span class="n">feed</span><span class="p">.</span><span class="nf">xml</span>
-<span class="err">└──</span> <span class="n">index</span><span class="p">.</span><span class="nf">html</span></code></pre></figure>
-
-<p>接着我们可以启动服务<code class="highlighter-rouge">jekyll serve</code>
-你会发现项目根目录下面多了一个<code class="highlighter-rouge">_site</code>目录，这个目录是编译后生成的文件，编译主要有完成的工作有:</p>
-
-<ol>
-  <li>scss -&gt; css</li>
-  <li>*.markdown -&gt; html</li>
-  <li>xml(Liquid标签) -&gt; xml (纯粹)</li>
-</ol>
-
-<p>启动服务成功后他会提示你<code class="highlighter-rouge">Server address: http://127.0.0.1:4000/</code>。
-在浏览器中地址栏中输入localhost:4000即可访问demo的首页</p>
+<p>GFW不允许通过，设置CURL代理</p>
 
 <blockquote>
-
+  <p>curl_setopt($ch,CURLOPT_PROXY,’127.0.0.1’);<br />
+curl_setopt($ch,CURLOPT_PROXYPORT,’8787’);</p>
 </blockquote>
 
-<h2 id="liquid">Liquid标签</h2>
+<p>入职一个月，学到什么了呢
+1. 怎么接入paypal-php-sdk
+2. 怎么申请paypal开发者账号，还有测试账号。
+3. 怎么申请google,facebook,twitter的第三方登录
+4. 怎么灵活运用TP3.2的国际化功能，来达到各个版本之间的灵活切换，而不影响功能
+5. swiper框架的使用，wechat-jssdk的使用</p>
 
-<h3 id="assign---">1. assign - 赋值标签</h3>
-
-<blockquote>
-  <p>{% assign post_title = post.title %}<br />
-{{ post_title }}<br />
-{% assign post_title = ‘birdshark’ | upcase %}<br />
-{{ post_title }}</p>
-</blockquote>
-
-<h3 id="capture---">2. capture - 解析代码块，将结果赋值给一个变量</h3>
-
-<p>这个标签跟ThinkPhP里边的fetch方法类似，解析标签后获取的模板内容</p>
-
-<blockquote>
-  <p>{% assign i = 1 %}<br />
-{% capture attribute_name %}<br />
-{{ post.title | handleize }}-{{ i }}-color<br />
-{% endcapture %}<br />
-{{ attribute_name }}</p>
-</blockquote>
-
-<h3 id="case---">3. case - 开关标签</h3>
-
-<p><code class="highlighter-rouge">switch case</code> 与 <code class="highlighter-rouge">case when</code>相比,后者不用break断开开关了</p>
-
-<blockquote>
-  <p>{% case condition %}<br />
-{% when 1 %}<br />
-hit 1<br />
-{% when 2 or 3 %}<br />
-hit 2 or 3<br />
-{% else %}<br />
-… else …<br />
-{% endcase %}</p>
-</blockquote>
-
-<blockquote>
-  <p>{% assign template = ‘yellowblue’%}<br />
-{% case template %}<br />
-{% when ‘red’ %}<br />
-red<br />
-{% when ‘black’ %}<br />
-black<br />
-{% else %}<br />
-yellowblue<br />
-{% endcase %}</p>
-</blockquote>
-
-<h3 id="comment---">4. comment - 注释标签</h3>
-
-<blockquote>
-  <p>We made 1 million dollars<br />
-{% comment %}<br />
-you can not see me in the html<br />
-{% endcomment %}<br />
-this year</p>
-</blockquote>
-
-<h3 id="cycle---">5. cycle - 交替循环</h3>
-
-<p>单组交替循环</p>
-
-<blockquote>
-  <p>{%cycle ‘you’,’me’,’him’%}<br />
-{%cycle ‘you’,’me’,’him’%}<br />
-{%cycle ‘you’,’me’,’him’%}</p>
-</blockquote>
-
-<p>多组交替循环</p>
-
-<blockquote>
-  <p>{% cycle ‘1’ : ‘you’,’me’,’him’%}<br />
-{% cycle ‘1’ : ‘you’,’me’,’him’%}<br />
-{% cycle ‘1’ : ‘you’,’me’,’him’%}<br />
-{% cycle ‘2’ : ‘you’,’me’,’her’%}<br />
-{% cycle ‘2’ : ‘you’,’me’,’her’%}<br />
-{% cycle ‘2’ : ‘you’,’me’,’her’%}</p>
-</blockquote>
-
-<h3 id="for---for">6. for - for循环</h3>
-
-<blockquote>
-  <p>{% for item in array %}<br />
-{{ item }}<br />
-{%endfor%}</p>
-</blockquote>
-
-<p>找了下，Liquid没有提供在此类模板中定义数组的方法，不过还有一个方法可行。那就是在根目录创建_data文件夹，支持<code class="highlighter-rouge">.yml</code>,<code class="highlighter-rouge">.yaml</code>,<code class="highlighter-rouge">.json</code>,<code class="highlighter-rouge">csv</code>4种文件格式。要用的时候呢<code class="highlighter-rouge">site.data.'filename'</code>,如果我在_data目录下面创建了一个<code class="highlighter-rouge">letters.csv</code>,那么<code class="highlighter-rouge">site.data.letters</code>就可获取到数组
-csv内容如下:</p>
-
-<blockquote>
-  <p>i,v<br />
-0,a<br />
-1,b<br />
-2,c<br />
-3,d<br />
-4,e<br />
-5,f<br />
-6,g</p>
-</blockquote>
-
-<blockquote>
-  <p>{%for a in site.data.letters%}<br />
-{{ a.i }}<br />
-{%endfor%}</p>
-</blockquote>
-
-<h3 id="break---for">7. break - 中断for循环</h3>
-
-<blockquote>
-  <p>{%for a in site.data.letters%}<br />
-{%if a.i == ‘4’ %}<br />
-{%break%}<br />
-{%endif%}<br />
-{{a.i}}<br />
-{%endfor%}</p>
-</blockquote>
-
-<h3 id="continue-">8. continue 中断当前循环跳到下一次循环</h3>
-
-<blockquote>
-  <p>{%for a in site.data.letters%}<br />
-{%if a.i == ‘4’ %}<br />
-{%continue%}<br />
-{%endif%}<br />
-{{a.i}}<br />
-{%endfor%}</p>
-</blockquote>
-
-<h3 id="if---">9. if - 条件判断</h3>
-
-<p>操作符可以是 <code class="highlighter-rouge">&gt;</code>,<code class="highlighter-rouge">&lt;</code>,<code class="highlighter-rouge">=</code>,<code class="highlighter-rouge">!=</code>,<code class="highlighter-rouge">contains</code>,连接操作符 <code class="highlighter-rouge">and</code>,<code class="highlighter-rouge">or</code></p>
-
-<blockquote>
-  <p>{%if condition%}<br />
-{%elsif condition%}<br />
-…<br />
-{%else%}<br />
-{%endif%}</p>
-</blockquote>
-
-<h3 id="include---">10. include - 引入文件</h3>
-
-<blockquote>
-  <p>{%include xxx.html%}</p>
-</blockquote>
-
-<h3 id="raw---">11. raw - 暂时禁用标签处理.</h3>
-
-<p>以下代码需要用<code class="highlighter-rouge"><span class="p">{</span><span class="err">/</span><span class="w"> </span><span class="err">raw</span><span class="w"> </span><span class="err">/</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="err">/</span><span class="w"> </span><span class="err">endraw</span><span class="w"> </span><span class="err">/</span><span class="p">}</span></code>包起来才不会被执行，当然为了能看到这端代码 ，我只得用<code class="highlighter-rouge">/</code>代替<code class="highlighter-rouge">%</code>了</p>
-
-<blockquote>
-  <p>{%for a in site.data.letters%}<br />
-{%if a.i == ‘4’ %}<br />
-{%continue%}<br />
-{%endif%}<br />
-{{a.i}}<br />
-{%endfor%}</p>
-</blockquote>
-
-<h3 id="unless---if">12. unless - if的镜像方法</h3>
-
-<blockquote>
-  <p>{%unless condition%}<br />
-{%else%}<br />
-something<br />
-{%endunless%}</p>
-</blockquote>
-
-<h3 id="section">13. 标准过滤器</h3>
-
-<p><code class="highlighter-rouge">date</code> - 日期函数<br />
-<code class="highlighter-rouge">capitalize</code> - 首字母大写<br />
-<code class="highlighter-rouge">downcase</code> - 小写转化<br />
-<code class="highlighter-rouge">upcase</code> - 大写转化<br />
-<code class="highlighter-rouge">first</code> - 获取数组里的第一个元素<br />
-<code class="highlighter-rouge">last</code> - 获取数组里的最后一个元素<br />
-<code class="highlighter-rouge">join</code> - 将数组用字符连接成字符串<br />
-<code class="highlighter-rouge">sort</code> - 数组排序 <br />
-<code class="highlighter-rouge">reverse</code> - 倒序<br />
-<code class="highlighter-rouge">map</code> - 从数组中获取给定键的值<br />
-<code class="highlighter-rouge">size</code> - 返回字符串长度或者数组长度<br />
-<code class="highlighter-rouge">uniq</code> - 数组去重<br />
-<code class="highlighter-rouge">escape</code> - html编码
-<code class="highlighter-rouge">escape_once</code> - html编码不影响实体(ps: 跟上面的没啥区别) 
-<code class="highlighter-rouge">url_encode</code> - url编码<br />
-<code class="highlighter-rouge">strip</code> - 去空格<br />
-<code class="highlighter-rouge">lstrip</code> - 只去头部的空格<br />
-<code class="highlighter-rouge">rstrip</code> - 只去尾部的空格<br />
-<code class="highlighter-rouge">strip_html</code> - 剔除html标签<br />
-<code class="highlighter-rouge">strip_newlines</code> - 剔除文本换行<br />
-<code class="highlighter-rouge">newline_to_br</code> - 将问本换行转化为html的换行<br />
-<code class="highlighter-rouge">replace</code> - 替换所有指定字符串<br />
-<code class="highlighter-rouge">replace_first</code> - 替换第一次出现的指定字符串 <br />
-<code class="highlighter-rouge">remove</code> - 移除所有指定的字符串<br />
-<code class="highlighter-rouge">remove_first</code> - 移除第一次出现的指定的字符串<br />
-<code class="highlighter-rouge">truncate</code> - 截取指定长度的字符串，并用指定字符代替他<br />
-<code class="highlighter-rouge">prepend</code> - 在头部添加字符
-<code class="highlighter-rouge">pluralize</code> - (ps:测过，不起作用，可能还需要安装<a href="https://github.com/bdesham/pluralize">额外的库</a>)<br />
-<code class="highlighter-rouge">append</code> - 拼接字符  <br />
-<code class="highlighter-rouge">slice</code> - 字符串截取  <br />
-<code class="highlighter-rouge">split</code> - 用符号将字符分割  <br />
-<code class="highlighter-rouge">minus</code> - 减法  <br />
-<code class="highlighter-rouge">plus</code> - 加法  <br />
-<code class="highlighter-rouge">times</code> - 乘法  <br />
-<code class="highlighter-rouge">divided_by</code> - 除法  <br />
-<code class="highlighter-rouge">modulo</code> - 模运算  <br />
-<code class="highlighter-rouge">round</code> - 约数运算  <br />
-<code class="highlighter-rouge">floor</code> - 向下取整运算  <br />
-<code class="highlighter-rouge">ceil</code> - 向上取整  <br />
-<code class="highlighter-rouge">default</code> - 默认值<br />
-以上标准过滤器用例皆可<a href="http://docs.shopify.com/themes/liquid-documentation/filters/additional-filters#date">在这里</a>找到。
-好了关于Liquid的部分就介绍到这里</p>
-
-<blockquote>
-
-</blockquote>
-
-<h2 id="post">post页面定义</h2>
-
-<h3 id="section-1">1. 头部参数</h3>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>`layout` 文章模板,对应_layouts文件夹下的同名文件  
-`title`  文章标题
-`date`   文章创建时间。这个随便写，但是要理智  
-`categories`  文章分类  
-`tags`  文章标签，可以是多个值，中间以空格隔开  
-`published`  是否发布 `true` or `false`  
-`permalink` 相当于url的rewrite   当然你也可定制一些其他的参数,只要你觉得合适  
-</code></pre>
-</div>
-
-<h3 id="section-2">2. 内容赋值</h3>
-<p>了解了那么多，那么当一个post被创建有哪些参数可以供给我们使用呢？</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>A. site   site一般是定义在_config.yml里面的参数，像`site.title`，`site.username`等，但是还有些比较有用的,像`site.categories`代表所有的分类,`site.tags`代表所有的标签，`site.posts`代表所有的文章  
-B. page   page这是页面级别的元素了，头部参数存放在page数组里面
-</code></pre>
-</div>
-
-<h3 id="section-3">3. 摘录配置</h3>
-
-<p>一般来说，首页不会将文章的全部都放出来，而是取一部分出来，那怎么做到这样的效果呢，jekyll很人性化，不要你去写什么额外的函数只需要在<code class="highlighter-rouge">_config.yml</code>里添加一行</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">excerpt_separator: </span><span class="o">&lt;!--</span> <span class="n">more</span> <span class="o">--&gt;</span></code></pre></figure>
-
-<p>然后在post中适当的位置加上 <code class="highlighter-rouge">&lt;!-- more --&gt;</code>就可以获取文章的摘要了</p>
-
-<h3 id="section-4">4. 分页配置</h3>
-
-<p><code class="highlighter-rouge">_config.yml</code>中加入一下参数</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">gems: </span><span class="p">[</span><span class="n">jekyll</span><span class="o">-</span><span class="n">paginate</span><span class="p">]</span>
-<span class="ss">paginate: </span><span class="mi">5</span>
-<span class="ss">paginate_path: </span><span class="s2">"/blog/page/:num"</span></code></pre></figure>
-
-<p>post中使用</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;!--</span> <span class="no">This</span> <span class="n">loops</span> <span class="n">through</span> <span class="n">the</span> <span class="n">paginated</span> <span class="n">posts</span> <span class="o">--&gt;</span>
-<span class="p">{</span><span class="sx">% for </span><span class="n">post</span> <span class="k">in</span> <span class="n">paginator</span><span class="p">.</span><span class="nf">posts</span> <span class="sx">%}
-  &lt;h1&gt;&lt;a href="{{ post.url }</span><span class="p">}</span><span class="s2">"&gt;{{ post.title }}&lt;/a&gt;&lt;/h1&gt;
-  &lt;p class="</span><span class="n">author</span><span class="s2">"&gt;
-    &lt;span class="</span><span class="n">date</span><span class="s2">"&gt;{{ post.date }}&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;div class="</span><span class="n">content</span><span class="s2">"&gt;
-    {{ post.content }}
-  &lt;/div&gt;
-{% endfor %}
-
-&lt;!-- Pagination links --&gt;
-&lt;div class="</span><span class="n">pagination</span><span class="s2">"&gt;
-  {% if paginator.previous_page %}
-    &lt;a href="</span><span class="p">{{</span> <span class="n">paginator</span><span class="p">.</span><span class="nf">previous_page_path</span> <span class="p">}}</span><span class="s2">" class="</span><span class="n">previous</span><span class="s2">"&gt;Previous&lt;/a&gt;
-  {% else %}
-    &lt;span class="</span><span class="n">previous</span><span class="s2">"&gt;Previous&lt;/span&gt;
-  {% endif %}
-  &lt;span class="</span><span class="n">page_number</span> <span class="s2">"&gt;Page: {{ paginator.page }} of {{ paginator.total_pages }}&lt;/span&gt;
-  {% if paginator.next_page %}
-    &lt;a href="</span><span class="p">{{</span> <span class="n">paginator</span><span class="p">.</span><span class="nf">next_page_path</span> <span class="p">}}</span><span class="s2">" class="</span><span class="k">next</span><span class="s2">"&gt;Next&lt;/a&gt;
-  {% else %}
-    &lt;span class="</span><span class="k">next</span> <span class="s2">"&gt;Next&lt;/span&gt;
-  {% endif %}
-&lt;/div&gt;</span></code></pre></figure>
-
-<blockquote>
-
-</blockquote>
-
-<h2 id="section-5">结语</h2>
-
-<p>此篇文章粗略的介绍了一下jekyll和liquid的用法，以及相关的参数，多少都是有些帮助吧，要想了解更多的知识还请移步以下参考链接。</p>
-
-<blockquote>
-
-</blockquote>
-
-<p>参考链接<br />
-<a href="https://jekyllrb.com/">https://jekyllrb.com/</a><br />
-<a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">https://github.com/Shopify/liquid/wiki/Liquid-for-Designers</a><br />
-<a href="https://docs.shopify.com/themes/liquid/filters/additional-filters">https://docs.shopify.com/themes/liquid/filters/additional-filters</a></p>
+<p>下面是个人的一些想法，工作周例会时，头儿老是强调去研究api，然后自己编码，我觉得这个不是很必要。尽管这样会弱化(?)你的编码能力。
+但是在我看来，这之中未必没有让你觉得受益的地方。
+1. 让别人写的更融洽的结合到现有的环境，这需要一定的功力
+2. 使用的过程中会接触的别人的代码，scan code，可以了解他人的设计思路，学习他人的编码技巧。
+3. github上那么多的库，建库的目的是什么，就是为了便捷开发，节约成本，特别是对于一些国外的产品，同时你的英文水平有不甚高。这个时候当如何。找找歪国人写的api总是没错的，为什么，对api的理解很容易。这样可以减少出错的概率。</p>
 
 
 		</article>
@@ -1805,12 +1481,7 @@ B. page   page这是页面级别的元素了，头部参数存放在page数组�
 				
 					
 					
-						<a class="tag-link" href="/tag/jekyll">jekyll</a> ,
-					
-				
-					
-					
-						<a class="tag-link" href="/tag/liquid">liquid</a>
+						<a class="tag-link" href="/tag/php">php</a>
 					
 				
 			</div>
@@ -1824,10 +1495,8 @@ B. page   page这是页面级别的元素了，头部参数存放在page数组�
 
 	<div class="posts-nav">
 		
-			<a href="/jekyll/2016/03/04/kramdown.html" title="markdown的基本使用方法" class="go-to right-post">&rarr;</i></a>
 		
-		
-			<a href="/jekyll/2016/02/29/github-pages-static-blog.html" title="github-pages-静态博客搭建" class="go-to left-post">&larr;</a>
+			<a href="/skill/2016/05/11/mysql-tips.html" title="mysql-tips" class="go-to left-post">&larr;</a>
 		
 	</div>
 
@@ -1850,7 +1519,7 @@ B. page   page这是页面级别的元素了，头部参数存放在page数组�
 		</header>
 		<div class="module-body">
       <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="" data-title="jekyll基本使用方法" data-url="http://birdshark.github.io/jekyll/2016/03/02/jekyll-basic-used.html"></div>
+    <div class="ds-thread" data-thread-key="" data-title="mysql-tips" data-url="http://birdshark.github.io/skill/2016/05/11/php-oauth-tips.html"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   `<script type="text/javascript">

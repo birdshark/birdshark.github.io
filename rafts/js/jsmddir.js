@@ -55,11 +55,17 @@
         },
         template:function(temp,flag,value){
             return temp.replace(flag,value);
+        },
+        count:function(html){
+
+            $h1 = html.find('h2,h3,h4');
+            $length = $h1.length;
+            return $length;
         }
     }
     $.bird.directory.make();
 })(jQuery,window);
 
 $(window).scroll(function () {
-    $(window).scrollTop() > 50 ? $('.scroll').show():$('.scroll').hide();
+    $(window).scrollTop() > 50 && $.bird.directory.count($('.post')) > 0 ? $('.scroll').show():$('.scroll').hide();
 });
