@@ -39,3 +39,5 @@ curl_setopt($ch,CURLOPT_PROXYPORT,'8787');
 } else {  
 	$fileData = array('userfile' => '@' . realpath($filePath));  
 }
+
+linux的快捷方式创建方法`ln -s 源 快捷方式`
