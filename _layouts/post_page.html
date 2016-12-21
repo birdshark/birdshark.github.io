@@ -11,12 +11,11 @@
 
       <div role="main" class="main-content main-post-content full-width">
         {{ content }}
+        {% include scroll_bar.html %}
       </div>
 
 	{% if page.layout == "post" %}
       {% include comment.html %}
-
-      {% include scroll_bar.html %}
 	{% endif %}
 
       {% include aside.html %}

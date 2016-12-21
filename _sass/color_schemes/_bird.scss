@@ -151,16 +151,19 @@ code{
 .scroll {
   z-index: 0;
   position: fixed;
-  right: -20rem;
+  right: -18rem;
+  top: 25rem;
+  opacity: 0.4;
   transition: all 1s;
 }
 .scroll:hover{
   transition: all 1s;
-  transform: translateX(-20rem);
+  opacity: 1;
+  transform: translateX(-15rem);
 }
 
 .scroll ul{
-  line-height: .5rem;
+  line-height: .6rem;
   overflow:hidden ;
   font-size: 12px;
   font-family: Consolas, Monaco, 'Andale Mono', sans-serif;
