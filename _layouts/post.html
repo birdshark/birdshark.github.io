@@ -76,13 +76,12 @@ layout: post_page
 		{% endif %}
 
 	</div>
-
 	<div class="posts-nav">
 		{% if(page.next) %}
-			<a href="{{page.next.url}}" title="{{page.next.title}}" class="go-to right-post">&rarr;</i></a>
+			<a href="{{ page.next.url }}" title="{{ page.next.title }}" class="go-to right-post">&rarr;</i></a>
 		{% endif %}
 		{% if(page.previous) %}
-			<a href="{{page.previous.url}}" title="{{page.previous.title}}" class="go-to left-post">&larr;</a>
+			<a href="{{ page.previous.url }}" title="{{ page.previous.title }}" class="go-to left-post">&larr;</a>
 		{% endif %}
 	</div>
 
