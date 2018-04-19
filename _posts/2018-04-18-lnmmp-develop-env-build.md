@@ -9,6 +9,7 @@ tags: linux
 
 
 ### centos 7 编译安装php7.2.4
+
 #### 1. 安装必要的库和头文件
     yum install libxml-devel culr curl-devel gd-devel icu libicu-devel gcc gcc-c++ libxslt-devel libzip libzip-devel libatomic_ops-devel GeoIP-devel perl-ExtUtils-Embed dpkg libevent libevent-devel zlib
 
